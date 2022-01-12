@@ -33,4 +33,3 @@ class TemperatureConverterPage extends StatefulWidget {
   TemperatureConverterPageState createState() =>
       TemperatureConverterPageState();
 }
-
