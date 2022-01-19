@@ -50,4 +50,12 @@ void main() {
     expectSync(find.text('-273.15'), findsOneWidget);
     expectSync(find.text('-459.66999999999996'), findsOneWidget);
   });
+
+  testWidgets('Test open info page', (WidgetTester tester) async {
+    await tester.pumpWidget(const TemperatureConverterApp());
+
+    await tester.tap(find.byType(FloatingActionButton));
+    await tester.pumpAndSettle();
+    expect(find.byType(Image), findsOneWidget);
+  });
 }
